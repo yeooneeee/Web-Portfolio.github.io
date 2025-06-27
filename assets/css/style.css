@@ -903,101 +903,65 @@ a:hover {
 # Portfolio
 --------------------------------------------------------------*/
 .work-box {
-  margin-bottom: 3rem;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+  margin-bottom: 2rem;   /* 3rem → 2rem(여백 줄이기) */
   background-color: #fff;
-}
-.work-box:hover img {
-  transform: scale(1.3);
+  /* min-height: 410px;  // 필요하면 추가 */
+  /* max-width: 370px;   // 필요하면 추가 */
+  display: flex;
+  flex-direction: column;
+  /* box-shadow, border-radius 등 원하는 스타일 추가 가능 */
 }
 
+/* 카드 이미지 영역 */
 .work-img {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
+  width: 100%;
+  min-height: 270px;
+  background: #fff;
 }
 .work-img img {
   transition: all 1s;
+  width: 80%;
+  height: auto;
+  max-height: 220px;
+  object-fit: contain;
 }
 
+/* 카드 콘텐츠 패딩 최소화 */
 .work-content {
-  padding: 2rem 3% 1rem 4%;
-}
-.work-content .w-more {
-  color: #4e4e4e;
-  font-size: 0.8rem;
-}
-.work-content .w-more .w-ctegory {
-  color: #0078ff;
-}
-.work-content .w-like {
-  font-size: 2.5rem;
-  color: #0078ff;
-  float: right;
-}
-.work-content .w-like a {
-  color: #0078ff;
-}
-.work-content .w-like .num-like {
-  font-size: 0.7rem;
+  padding: 1rem 1rem 1rem 1rem;   /* 2rem 3% 1rem 4% → 1rem 1rem 1rem 1rem */
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .w-title {
   font-size: 1.2rem;
+  margin-bottom: 0.8rem;
 }
 
-/*--------------------------------------------------------------
-# Portfolio Details
---------------------------------------------------------------*/
-.portfolio-details {
-  padding-top: 40px;
+/* 반응형에서 2줄(모바일) 대응 */
+@media (max-width: 991px) {
+  .col-md-4 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .work-box {
+    margin-bottom: 1.3rem;
+  }
 }
-.portfolio-details .portfolio-details-slider img {
-  width: 100%;
-}
-.portfolio-details .portfolio-details-slider .swiper-pagination {
-  margin-top: 20px;
-  position: relative;
-}
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: #fff;
-  opacity: 1;
-  border: 1px solid #0078ff;
-}
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #0078ff;
-}
-.portfolio-details .portfolio-info {
-  padding: 30px;
-  box-shadow: 0px 0 30px rgba(78, 78, 78, 0.08);
-}
-.portfolio-details .portfolio-info h3 {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #eee;
-}
-.portfolio-details .portfolio-info ul {
-  list-style: none;
-  padding: 0;
-  font-size: 15px;
-}
-.portfolio-details .portfolio-info ul li + li {
-  margin-top: 10px;
-}
-.portfolio-details .portfolio-description {
-  padding-top: 30px;
-}
-.portfolio-details .portfolio-description h2 {
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-.portfolio-details .portfolio-description p {
-  padding: 0;
+@media (max-width: 600px) {
+  .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .work-img {
+    min-height: 160px;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -1750,6 +1714,306 @@ footer .credits a {
   100% {
     transform: translateX(-50%);
   }
+}
+.slide-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  filter: blur(0px) brightness(0.8); /* 효과 조절 가능 */
+}
+
+/* 슬라이드와 텍스트가 겹치지 않게 testimonial-box에 z-index */
+.testimonials-slider .swiper-slide {
+  position: relative;
+  height: 480px; 
+  overflow: hidden;
+}
+.testimonial-box {
+  position: relative;
+  z-index: 1;
+  /* 텍스트 중앙 정렬 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #fff;
+}
+.slide-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;             
+  object-position: 0% 20%;
+  z-index: 0;
+  filter: blur(0px) brightness(0.8);
+}
+
+.portfolio-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -14px;
+  margin-right: -14px;
+}
+.portfolio-col {
+  flex: 0 0 33.3333%;
+  max-width: 33.3333%;
+  padding: 14px;
+  box-sizing: border-box;
+  display: flex;
+}
+@media (max-width: 991px) {
+  .portfolio-col { flex: 0 0 50%; max-width: 50%; }
+}
+@media (max-width: 600px) {
+  .portfolio-col { flex: 0 0 100%; max-width: 100%; }
+}
+
+.work-box {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.work-img {
+  width: 100%;
+  min-height: 170px;
+   aspect-ratio: 16/9;
+  display: flex;
+  height: 290px; 
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+}
+.work-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;     
+  display: block;
+  margin: 0;
+  max-width: none;
+  max-height: none;
+  background: none;
+}
+
+.work-box:hover .work-img img {
+  transform: scale(1.08);
+}
+.work-content {
+  padding: 1.2rem 1.1rem 1rem 1.1rem;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+.w-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+  color: #1a1a1a;
+}
+.portfolio-btns {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.github-icon {
+  width: 28px;
+  height: 28px;
+  margin-top: -3px;
+  vertical-align: middle;
+}
+/* 원하는 대로 숫자로 지정! */
+.my-custom-modal {
+  width: 600px;      /* 고정 가로 */
+  max-width: 90vw;   /* 창이 작을 땐 최대 90%까지 */
+  height: 700px;     /* 고정 세로 */
+  max-height: 90vh;  /* 창이 작을 땐 최대 90%까지 */
+}
+
+/* 모달 내용이 넘칠 때 스크롤 가능하게 */
+.my-custom-modal .modal-content {
+  height: 100%;
+  max-height: 100%;
+  overflow-y: auto;
+}
+.my-custom-modal img, 
+#attractivePosterModal img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 90%;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  background: #f4f6fc;
+}
+/* 
+#attractivePosterModal img {
+  width: 500px;     
+  height: 600px;
+  object-fit: contain;  
+  margin: 0 auto;
+}
+ */
+ @media (max-width: 600px) {
+  .my-custom-modal {
+    width: 98vw;
+    height: auto;
+    min-height: 200px;
+    max-width: 99vw;
+    max-height: 99vh;
+    padding: 0;
+  }
+  .my-custom-modal .modal-content {
+    padding: 0;
+    max-width: 100vw;
+    max-height: 99vh;
+  }
+  .my-custom-modal img {
+    width: 99vw;
+    max-width: 98vw;
+    height: auto;
+    max-height: 88vh;
+  }
+}/* Contact Section 기본 세팅 */
+#contact {
+  padding-top: 120px;
+  padding-bottom: 90px;
+  background: #f8f9fa;
+  min-height: 550px;
+  /* 필요한 경우: overflow-x: hidden; */
+}
+
+/* 컨테이너를 flex로 정렬: PC/태블릿 기준 */
+#contact .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 64px;
+}
+
+/* 왼쪽: 소개글 */
+#contact .contact-desc {
+  flex: 1.1 1 260px;
+  max-width: 520px;
+  margin-bottom: 30px;
+}
+#contact h2 {
+  font-size: 2.3rem;
+  font-weight: 800;
+  margin-bottom: 1.3rem;
+  margin-left: 2px;
+  letter-spacing: -1px;
+}
+#contact .contact-desc p {
+  font-size: 1.18rem;
+  color: #222;
+  margin-bottom: 18px;
+  font-weight: 500;
+}
+#contact blockquote {
+  margin: 1.2em 0 1.6em 0;
+  padding: 0.8em 1.2em;
+  background: #f2f3f7;
+  border-left: 4px solid #4a82f7;
+  font-style: italic;
+  color: #727891;
+  font-size: 1rem;
+  border-radius: 8px;
+}
+
+/* 오른쪽: 카드 스타일 */
+#contact .card {
+  box-shadow: 0 6px 28px 0 rgba(60, 68, 100, 0.13);
+  border-radius: 1.2rem;
+  border: 1.5px solid #ebebeb;
+  background: #fff;
+  max-width: 380px;
+  min-width: 280px;
+  padding: 2.3rem 2rem 2rem 2rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+#contact .card h4 {
+  font-size: 1.22rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  letter-spacing: -0.5px;
+}
+
+#contact .card hr {
+  margin: 0.7rem 0 1rem 0;
+  border-top: 1.2px solid #e8e8ea;
+}
+
+#contact .card div, 
+#contact .card a {
+  font-size: 1.04rem;
+  color: #263253;
+  word-break: break-all;
+}
+#contact .card a {
+  color: #2777c4;
+  text-decoration: underline;
+  transition: color .17s;
+}
+#contact .card a:hover {
+  color: #124f8c;
+}
+
+#contact .card i {
+  margin-right: 7px;
+  color: #35559e;
+  font-size: 1.1em;
+}
+
+#contact .card .mt-4 {
+  font-size: 1.01rem;
+  opacity: 0.80;
+  margin-top: 1.6rem;
+  color: #6e7380;
+}
+
+/* 반응형 (태블릿/모바일) */
+@media (max-width: 991px) {
+  #contact .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 38px;
+  }
+  #contact .contact-desc {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    max-width: 98vw;
+    text-align: center;
+  }
+  #contact .card {
+    margin: 0 auto;
+  }
+}
+#contact .card img {
+  width: 21px;
+  height: 21px;
+  margin-right: 7px;
+  vertical-align: -5px;  
+  object-fit: contain;
 }
 
 

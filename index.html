@@ -11,8 +11,8 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/sithu.png" rel="icon">
-  <link href="assets/img/sithu.png" rel="apple-touch-icon">
+  <link href="assets/img/me.png" rel="icon">
+  <link href="assets/img/me.png" rel="apple-touch-icon">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
@@ -33,14 +33,14 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <h1 class="logo"><a href="index.html">DevFolio</a></h1>
-       <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
+      <h1 class="logo"><a href="index.html">Yeoone</a></h1>
+       <a href="index.html" class="logo"><img src="assets/img/backend.jpg" alt="" class="img-fluid"></a>
 
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="#services">Stack</a></li>
           <li><a class="nav-link scrollto " href="#work">Portfolio</a></li>
           <li><a class="nav-link scrollto " href="#blog">LIFE</a></li>
           <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
@@ -62,7 +62,7 @@
           </li> -->
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
+      
       </nav><!-- .navbar -->
 
     </div>
@@ -129,14 +129,13 @@
                 </ul>
               
                 <hr>
-
-                <a href="/assets/files" class="btn btn-outline-primary btn-block" target="_blank">
+                <a href="/assets/files/yeoone.pdf" class="btn btn-outline-primary btn-block" target="_blank">
                     이력서(PDF) 다운로드
                 </a>
-                <a href="files/all.pdf" class="btn btn-outline-primary btn-block" target="_blank">
+                <a href="/assets/files/Scholarship.pdf" class="btn btn-outline-primary btn-block" target="_blank">
                     장학내역(PDF) 다운로드
                 </a>
-                <a href="files/all.pdf" class="btn btn-outline-primary btn-block" target="_blank">
+                <a href="/assets/files/s_gpa.pdf" class="btn btn-outline-primary btn-block" target="_blank">
                     성적(PDF) 다운로드
                 </a>
                 </div>
@@ -247,29 +246,41 @@
         </div>
         <!-- 하단에 진행 과정 타임라인/아이콘화도 가능 -->
         <div class="job-timeline mt-4">
-          <span>사업홍보</span> →
-          <span>전문교육</span> →
-          <span>기업매칭</span> →
-          <span>인턴십/인건비지원</span> →
-          <span>정규직 채용</span>
-        </div>
+        <span>사업홍보 →</span>
+        <span>전문교육 →</span>
+        <span>기업매칭 →</span>
+        <span>인턴십/인건비지원 →</span>
+        <span>정규직 채용</span>
+      </div>
+
       </div>
     </div>
   </div>
 
-  <!-- 포스터 모달 -->
-  <div id="attractivePosterModal" class="modal" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-xl" role="document">
-      <div class="modal-content">
-        <div class="modal-body p-0">
-          <img src="/assets/img/seoul.png" class="w-100" alt="매력일자리 포스터" />
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" onclick="closeAttractivePosterModal()">닫기</button>
-        </div>
+ <!-- 포스터 모달 -->
+<div id="attractivePosterModal" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog my-custom-modal" role="document">
+    <div class="modal-content" style="position: relative;">
+      <!-- X 닫기 버튼 (오른쪽 상단) -->
+      <button type="button" class="btn-close" style="
+        position: absolute;
+        top: 14px;
+        right: 14px;
+        z-index: 10;
+        background: none;
+        border: none;
+        font-size: 2.1rem;
+        color: black;
+        opacity: 0.9;
+        cursor: pointer;
+      " aria-label="Close" onclick="closeAttractivePosterModal()">&times;</button>
+      <div class="modal-body p-0">
+        <img src="/assets/img/seoul.png" class="w-100" alt="매력일자리 포스터" />
       </div>
     </div>
   </div>
+</div>
+
 </section>
 
 
@@ -293,7 +304,8 @@
         <div class="service-box">
           <div class="service-ico">
             <span class="ico-circle">
-              <i class="bi bi-laptop" style="font-size:2.5rem;"></i>
+              <img src="assets/img/frontend.jpg" alt="font" style="width: 80px;">
+
             </span>
           </div>
           <div class="service-content">
@@ -311,7 +323,7 @@
         <div class="service-box">
           <div class="service-ico">
             <span class="ico-circle">
-              <i class="bi bi-cpu" style="font-size:2.5rem;"></i>
+               <img src="assets/img/bbbb.png" alt="back" style="width: 80px;">
             </span>
           </div>
           <div class="service-content">
@@ -329,7 +341,7 @@
         <div class="service-box">
           <div class="service-ico">
             <span class="ico-circle">
-              <i class="bi bi-database" style="font-size:2.5rem;"></i>
+              <img src="assets/img/data.jpg" alt="data" style="width: 80px;">
             </span>
           </div>
           <div class="service-content">
@@ -347,7 +359,7 @@
         <div class="service-box">
           <div class="service-ico">
             <span class="ico-circle">
-              <i class="bi bi-cloud" style="font-size:2.5rem;"></i>
+             <img src="assets/img/DEVOPS.jpg" alt="DevOps" style="width: 80px;">
             </span>
           </div>
           <div class="service-content">
@@ -365,7 +377,7 @@
         <div class="service-box">
           <div class="service-ico">
             <span class="ico-circle">
-              <i class="bi bi-git" style="font-size:2.5rem;"></i>
+              <img src="assets/img/COLLABORATION.jpg" alt="Collaboration"  style="width: 80px;">
             </span>
           </div>
           <div class="service-content">
@@ -432,223 +444,129 @@
 
 
     <!-- =======  포토폴리오 ======= -->
-      <section id="work" class="portfolio-mf sect-pt4 route">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="title-box text-center">
-              <h3 class="title-a">
-                Portfolio
-              </h3>
-              <p class="subtitle-a">
-               <a href="/Web-Portfolio.github.io/assets/files/all.pdf" class="btn btn-outline-primary btn-block" target="_blank">
-                   Portfolio Overview(PDF)
-                </a>
-              </p>
-              <div class="line-mf"></div>
-            </div>
-          </div>
-        </div>
-    <div class="row">
-            <!-- 한양대전시회 -->
-            <div class="col-md-4">
-            <div class="work-box">
-                <div class="work-img position-relative">
-                <img src="assets/img/hanyang-logo.jpg" class="img-fluid">
-                <div class="work-overlay">
-                    <div class="work-desc">
-                    <b>한양대학교 아트테라피 전시회</b><br>
-                      실제 한양대학원 미술치료학과 전시회 사이트 
-                    </div>
-                </div>
-                </div>
-                <div class="work-content">
-                <div class="row">
-                    <div class="col-sm-12">
-                    <h2 class="w-title">한양대전시회</h2>
-                    <div class="mt-2 d-flex gap-2">
-                        <a href="/assets/files/hanyang-exhibition.pdf" class="btn btn-outline-primary btn-sm" target="_blank">PDF 보기</a>
-                        <a href="https://hy-erica-arttherapy.com/" class="btn btn-outline-success btn-sm" target="_blank">한양대학교전시회 가기</a>
-                    </div>
-                    </div>
-                </div>
-                </div>
-            </div>
-            </div>
-            <!-- hgv -->
-            <div class="col-md-4">
-            <div class="work-box">
-                <div class="work-img position-relative">
-                <img src="/assets/img/hgv-logo.jpg" class="img-fluid">
-                <div class="work-overlay">
-                    <div class="work-desc">
-                    <b>HGV</b><br>
-                   영화 예매 사이트
-                    </div>
-                </div>
-                </div>
-                <div class="work-content">
-                <div class="row">
-                    <div class="col-sm-12">
-                    <h2 class="w-title">HGV</h2>
-                    <div class="mt-2 d-flex gap-2">
-                        <a href="/assets/files/hgv.pdf" class="btn btn-outline-primary btn-sm" target="_blank">PDF 보기</a>
-                        <a href="http://3.34.183.11:9090/MovieProject/" class="btn btn-outline-success btn-sm" target="_blank">HGV 가기</a>
-                    </div>
-                    </div>
-                </div>
-                </div>
-            </div>
-            </div>
-            <!-- SYoffice -->
-            <div class="col-md-4">
-            <div class="work-box">
-                <div class="work-img position-relative">
-                <img src="/assets/img/SYoffice-logo.jpg" class="img-fluid">
-                <div class="work-overlay">
-                    <div class="work-desc">
-                    <b>SYOffice </b><br>
-                     그룹웨어 사이트
-                    </div>
-                </div>
-                </div>
-                <div class="work-content">
-                <div class="row">
-                    <div class="col-sm-12">
-                    <h2 class="w-title">SYOffice</h2>
-                    <div class="mt-2 d-flex gap-2">
-                        <a href="/Web-Portfolio.github.io/assets/files/SYoffice.pdf" class="btn btn-outline-primary btn-sm" target="_blank">PDF 보기</a>
-                        <a href="http://syoffice.kro.kr/syoffice" class="btn btn-outline-success btn-sm" target="_blank">SYOffice 가기</a>
-                    </div>
-                    </div>
-                </div>
-                </div>
-            </div>
-            </div>
-
-     
-      
-
+      <!-- ======= Portfolio Section (한 줄 3개 보장, 반응형 포함) ======= -->
+<section id="work" class="portfolio-mf sect-pt4 route">
+  <div class="container">
+    <div class="title-box text-center">
+      <h3 class="title-a">Portfolio</h3>
+      <p class="subtitle-a">
+        <a href="/assets/files/all.pdf" class="btn btn-outline-primary btn-block" target="_blank">
+          Portfolio Overview(PDF)
+        </a>
+      </p>
+      <div class="line-mf"></div>
     </div>
-  </div>
-</section>
-<!--End 포토폴리오 -->
 
- <!-- ======= 사진 설명 ======= -->
-    <div class="testimonials paralax-mf bg-image" style="background-image: url(assets/img/overlay-bg.jpg)">
-      <div class="overlay-mf"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-
-            <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-              <div class="swiper-wrapper">
-
-                
-
-                <div class="swiper-slide">
-                  <div class="testimonial-box">
-                    <div class="author-test">
-                      <img src="assets/img/eimg.png" alt="" class="rounded-circle b-shadow-a">
-                      <span class="author">학생회</span>
-                    </div>
-                    <div class="content-test">
-                      <p class="description lead">
-                        I have read and studied books published by Mr. Ei Maung with exercises related to web development.
-                        I learned a lot from the professional web development book.
-                      </p>
-                    </div>
-                  </div>
-                </div><!-- End testimonial item -->
-
-                 <div class="swiper-slide">
-                  <div class="testimonial-box">
-                    <div class="author-test">
-                      <img src="https://tutflix.org/styles/darktheme/basic/tutflixLogo.png" alt="" class="rounded-circle b-shadow-a">
-                      <span class="author">새온</span>
-                    </div>
-                    <div class="content-test">
-                      <p class="description lead">
-                        I learned courses related to web development at TutFlix Education Community.
-                        It is a great site to learn a new skill with its library of educational videos.
-                      </p>
-                    </div>
-                  </div>
-                </div><!-- End testimonial item -->
-
-
-                <div class="swiper-slide">
-                  <div class="testimonial-box">
-                    <div class="author-test">
-                      <img src="https://res.cloudinary.com/crunchbase-production/image/upload/c_thumb,h_170,w_170,f_auto,g_faces,z_0.7,b_white,q_auto:eco,dpr_1/mrc8m8ju89szfgvctum1" alt="" class="rounded-circle b-shadow-a">
-                      <span class="author">드론 강연</span>
-                    </div>
-                    <div class="content-test">
-                      <p class="description lead">
-                        I also learned a lot about Javascript from James Codling's udemy courses.
-                        In particular, I studied and practiced react cousrses.
-                      </p>
-                    </div>
-                  </div>
-                </div><!-- End testimonial item -->
-
-                <div class="swiper-slide">
-                  <div class="testimonial-box">
-                    <div class="author-test">
-                      <img src="https://tutflix.org/styles/darktheme/basic/tutflixLogo.png" alt="" class="rounded-circle b-shadow-a">
-                      <span class="author">롯데장학생</span>
-                    </div>
-                    <div class="content-test">
-                      <p class="description lead">
-                        I learned courses related to web development at TutFlix Education Community.
-                        It is a great site to learn a new skill with its library of educational videos.
-                      </p>
-                    </div>
-                  </div>
-                </div><!-- End testimonial item -->
-
-                <div class="swiper-slide">
-                  <div class="testimonial-box">
-                    <div class="author-test">
-                      <img src="https://tutflix.org/styles/darktheme/basic/tutflixLogo.png" alt="" class="rounded-circle b-shadow-a">
-                      <span class="author">서울시매력일자리</span>
-                    </div>
-                    <div class="content-test">
-                      <p class="description lead">
-                        I learned courses related to web development at TutFlix Education Community.
-                        It is a great site to learn a new skill with its library of educational videos.
-                      </p>
-                    </div>
-                  </div>
-                </div><!-- End testimonial item -->
-
-                <div class="swiper-slide">
-                  <div class="testimonial-box">
-                    <div class="author-test">
-                      <img src="https://tutflix.org/styles/darktheme/basic/tutflixLogo.png" alt="" class="rounded-circle b-shadow-a">
-                      <span class="author">쌍용부트캠프</span>
-                    </div>
-                    <div class="content-test">
-                      <p class="description lead">
-                        I learned courses related to web development at TutFlix Education Community.
-                        It is a great site to learn a new skill with its library of educational videos.
-                      </p>
-                    </div>
-                  </div>
-                </div><!-- End testimonial item -->
-
-
-              </div>
-              <div class="swiper-pagination"></div>
+    <div class="portfolio-row">
+      <!-- 1번째 카드 -->
+      <div class="portfolio-col">
+        <div class="work-box">
+          <div class="work-img">
+            <img src="assets/img/hanyang-logo.jpg" alt="한양대전시회">
+          </div>
+          <div class="work-content">
+            <h2 class="w-title">한양대전시회</h2>
+            <div class="portfolio-btns">
+              <a href="/assets/files/hanyang-exhibition.pdf" class="btn btn-outline-primary btn-sm" target="_blank">PDF 보기</a>
+              <a href="https://hy-erica-arttherapy.com/" class="btn btn-outline-success btn-sm" target="_blank">한양대학교전시회 가기</a>
+              <a href="https://github.com/hanyang-art-therapy/backend"><img src="assets/img/skill-logo/github.png" alt="github" class="github-icon"></a>
             </div>
-
-            <!-- <div id="testimonial-mf" class="owl-carousel owl-theme">
-          
-        </div> -->
           </div>
         </div>
       </div>
-    </div><!-- End Testimonials Section -->
+      <!-- 2번째 카드 -->
+      <div class="portfolio-col">
+        <div class="work-box">
+          <div class="work-img">
+            <img src="assets/img/hgv-logo.jpg" alt="HGV">
+          </div>
+          <div class="work-content">
+            <h2 class="w-title">HGV</h2>
+            <div class="portfolio-btns">
+              <a href="/assets/files/hgv.pdf" class="btn btn-outline-primary btn-sm" target="_blank">PDF 보기</a>
+              <a href="http://3.34.183.11:9090/MovieProject/" class="btn btn-outline-success btn-sm" target="_blank">HGV 가기</a>
+              <a href="https://github.com/power8993/MovieProject"><img src="assets/img/skill-logo/github.png" alt="github" class="github-icon"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 3번째 카드 -->
+      <div class="portfolio-col">
+        <div class="work-box">
+          <div class="work-img">
+            <img src="assets/img/SYoffice-logo.jpg" alt="SYOffice">
+          </div>
+          <div class="work-content">
+            <h2 class="w-title">SYOffice</h2>
+            <div class="portfolio-btns">
+              <a href="/assets/files/SYoffice.pdf" class="btn btn-outline-primary btn-sm" target="_blank">PDF 보기</a>
+              <a href="http://syoffice.kro.kr/syoffice" class="btn btn-outline-success btn-sm" target="_blank">SYOffice 가기</a>
+              <a href="https://github.com/SYoffice/SYoffice"><img src="assets/img/skill-logo/github.png" alt="github" class="github-icon"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 4번째 카드부터 계속 .portfolio-col 추가 -->
+    </div>
+  </div>
+</section>
+    <!--End 포토폴리오 -->
+ <section class="testimonials paralax-mf" id="testimonials" style="padding: 0;">
+  <div class="overlay-mf"></div>
+  <div class="container-fluid" style="padding: 0;">
+    <div class="row">
+      <div class="col-12" style="padding: 0;">
+        <div class="testimonials-slider swiper" style="height: 480px;">
+          <div class="swiper-wrapper">
+            <!-- 새온 -->
+            <div class="swiper-slide">
+              <img src="assets/img/s-ai.jpeg" class="slide-bg-img" alt="새온" />
+              <div class="testimonial-box">
+                <div class="content-test">
+                 <h3 class="author-title" style="color:#fff; font-weight:bold;">자율 주행 자동차 AI 미션 챌린지</h3>
+                  <p class="description lead"> 2023.08.04 대전 컨벤션 센터. 새온 자율 주행자동차 AI 미션 챌린지 동상 </p>
+                </div>
+              </div>
+            </div>
+             <!-- 롯데장학생 -->
+            <div class="swiper-slide">
+              <img src="assets/img/lotte.JPG" class="slide-bg-img" alt="장학" />
+              <div class="testimonial-box">
+                <div class="content-test">
+                  <h3 class="author-title" style="color:#fff; font-weight:bold;">롯데장학재단 꿈나무멘토링</h3>
+                  <p class="description lead">롯데장학재단 꿈나무멘토링 장학생(선발)으로, 지역 아동센터에서 수학·영어 등 아동 맞춤형 학습 멘토링을 진행</p>
+                </div>
+              </div>
+            </div>
+               <!-- 드론 -->
+               <div class="swiper-slide">
+              <img src="assets/img/drone.jpg" class="slide-bg-img" alt="드론" />
+              <div class="testimonial-box">
+                <div class="content-test">
+                  <h3 class="author-title" style="color:#fff; font-weight:bold;">드론 동아리</h3>
+                  <p class="description lead">드론 동아리 회장으로 동아리 부원들과 외부 학생들 보조 수업진행 및 드론 관리 </p>
+                </div>
+              </div>
+            </div>
+           
+            <!-- 학생회 -->
+               <div class="swiper-slide">
+              <img src="assets/img/Student Association.jpeg" class="slide-bg-img" alt="장학" />
+              <div class="testimonial-box">
+                <div class="content-test">
+                  <h3 class="author-title" style="color:#fff; font-weight:bold;">학생회</h3>
+                  <p class="description lead">학생회 부학회장으로서 학과 학생들을 통솔하고, 다양한 학과 행사 기획 및 운영을 담당</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
     <!-- ======= Blog Section ======= -->
    <section id="blog" class="blog-mf sect-pt4 route">
@@ -757,90 +675,26 @@
 
 
     <!-- ======= Contact Section ======= -->
-    <section id="contact" class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(assets/img/overlay-bg.jpg)">
-      <div class="overlay-mf"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="contact-mf">
-              <div id="contact" class="box-shadow-full">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="title-box-2">
-                      <h5 class="title-left">
-                        Send Message Me
-                      </h5>
-                    </div>
-                    <div>
-                      <!-- <form action="forms/contact.php" method="post" role="form" class="php-email-form"> -->
-                        <form>
-                        <div class="row">
-                          <div class="col-md-12 mb-3">
-                            <div class="form-group">
-                              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                            </div>
-                          </div>
-                          <div class="col-md-12 mb-3">
-                            <div class="form-group">
-                              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                            </div>
-                          </div>
-                          <div class="col-md-12 mb-3">
-                            <div class="form-group">
-                              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-                            </div>
-                          </div>
-                          <div class="col-md-12">
-                            <div class="form-group">
-                              <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-                            </div>
-                          </div>
-                          <div class="col-md-12 text-center my-3">
-                            <!-- <div class="loading">Loading</div>
-                            <div class="error-message"></div>
-                            <div class="sent-message">Your message has been sent. Thank you!</div> -->
-                          </div>
-                          <div class="col-md-12 text-center">
-                            <button type="submit" class="button button-a button-big button-rouded">Send Message</button>
-                          </div>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="title-box-2 pt-4 pt-md-0">
-                      <h5 class="title-left">
-                        Get in Touch
-                      </h5>
-                    </div>
-                    <div class="more-info">
-                      <p class="lead">
-                        I have prepared for my networking. Learning and practice projects git repository, 
-                        worked offices, contact phone number and mail are as follows.
-                        I have also made a message box so that you can send me a direct message.
-                        I'm awaiting your contact for opportunities.
-                      </p>
-                      <ul class="list-ico">
-                        <li><span class="bi bi-geo-alt"></span> Hlaing tsp, Yangon, Myanmar</li>
-                        <li><span class="bi bi-phone"></span> 010-2704-6640</li>
-                        <li><span class="bi bi-envelope"></span> dudnjs0514@naver.com</li>
-                      </ul>
-                    </div>
-                    <div class="socials">
-                      <ul>
-                        <li><a href="https://www.facebook.com/profile.php?id=100011007767333"><span class="ico-circle"><i class="bi bi-facebook"></i></span></a></li>
-                        <li><a href="https://github.com/yeooneeee"><span class="ico-circle"><i class="bi bi-github"></i></span></a></li>
-                        <li><a href="https://www.linkedin.com/in/sithu-lwin-b506a0233/"><span class="ico-circle"><i class="bi bi-linkedin"></i></span></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section><!-- End Contact Section -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-desc">
+      <h2>Contact</h2>
+      <p>함께 성장할 준비가 되어 있습니다.<br>궁금한 점이 있다면 언제든 편하게 연락주세요!</p>
+      <blockquote>
+        "좋은 개발자는 코드를 넘어<br>
+        팀과 함께 성장하는 사람이라고 생각합니다."
+      </blockquote>
+    </div>
+    <div class="card">
+      <h4>김여원 | Backend Developer</h4>
+      <hr>
+      <div>   <img src="assets/img/email.png" alt="email" /><a href="mailto:dudnjs0514@naver.com">dudnjs0514@naver.com</a></div>
+      <div><img src="assets/img/tel.png" alt="tel" /> 010-2704-6640</div>
+      <div><img src="assets/img/skill-logo/github.png" alt="github" /> <a href="https://github.com/yeooneeee" target="_blank">github.com/yeooneeee</a></div>
+      <div class="mt-4 text-center">감사합니다.</div>
+    </div>
+  </div>
+</section>
 
   </main><!-- End #main -->
 
@@ -875,5 +729,32 @@
   <script src="assets/js/main.js"></script>
 
 </body>
+<script>
+function openAttractivePosterModal() {
+  document.getElementById('attractivePosterModal').style.display = 'block';
+  document.getElementById('attractivePosterModal').classList.add('show');
+  document.body.classList.add('modal-open');
+}
+
+function closeAttractivePosterModal() {
+  document.getElementById('attractivePosterModal').style.display = 'none';
+  document.getElementById('attractivePosterModal').classList.remove('show');
+  document.body.classList.remove('modal-open');
+}
+
+// 바깥 영역 클릭 시 닫기
+document.addEventListener('DOMContentLoaded', function () {
+  var modal = document.getElementById('attractivePosterModal');
+  if (modal) {
+    modal.addEventListener('click', function (e) {
+      // modal-dialog 클릭 시에는 닫히지 않게
+      if (e.target === modal) {
+        closeAttractivePosterModal();
+      }
+    });
+  }
+});
+</script>
+
 
 </html>
