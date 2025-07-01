@@ -2014,5 +2014,94 @@ footer .credits a {
   vertical-align: -5px;  
   object-fit: contain;
 }
+/* --- Portfolio Work 카드 이미지 오버레이 효과 추가 --- */
+
+.work-img {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 170px;
+  aspect-ratio: 16/9;
+  display: flex;
+  height: 290px;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;
+  border-radius: 12px 12px 0 0;
+}
+
+.work-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: all 0.9s cubic-bezier(.27,.89,.72,1.13);
+  display: block;
+}
+
+/* 기존 확대 효과 제거(원하는 경우 살려둬도 무방)
+.work-box:hover .work-img img {
+  transform: scale(1.08);
+}
+*/
+
+/* 오버레이 박스 */
+.work-img .work-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(20, 30, 50, 0.72);
+  color: #fff;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.08rem;
+  font-weight: 500;
+  padding: 18px;
+  pointer-events: none;
+  transition: opacity 0.33s cubic-bezier(.37,.21,.61,1.02);
+  z-index: 2;
+  border-radius: 12px 12px 0 0;
+}
+
+/* 호버 시 오버레이 등장 */
+.work-img:hover .work-overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* 오버레이 안의 텍스트에 추가 효과 가능 */
+.work-overlay .overlay-text {
+  animation: overlayTextUp 0.4s cubic-bezier(.32,1.52,.48,1.11) both;
+}
+@keyframes overlayTextUp {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.work-overlay .overlay-text {
+  font-size: 0.9rem;          /* 글자 크기 */
+  font-weight: 400;           /* 글자 두께 */
+  line-height: 1.7;           /* 줄간격 */
+  text-align: left;           /* 왼쪽정렬: 필요하면 center로 바꿔도 됨 */
+  letter-spacing: 0.01em;     /* 자간 */
+  word-break: keep-all;       /* 한글 줄바꿈 자연스럽게 */
+  /* color: #fff;            기본 흰색이지만, 더 강조하려면 변경 가능 */
+}
+.work-overlay .overlay-title {
+  font-weight: 700;
+  font-size: 1.3em;    
+  letter-spacing: -0.01em;
+  color: #fff;
+  display: block;
+  margin-bottom: 0.25em;
+}
+
 
 
